@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <style>
+      body {
+        background-color: lightblue;
+      }
+      .calculator {
+        max-width: 168px;
+        background-color: beige;
+      }
+      .topRow {
+        display:flex;
+      }
+      .display-container {
+        display: flex;
+        justify-content: end;
+        margin: 1px;
+        padding: 10px;
+        background-color: black;
+        min-width: 104px;
+      }
+      .display {
+        color: white;
+      }
+      .rowOne {
+        display: flex;
+      }
+      .rowTwo {
+        display: flex;
+      }
+      .rowThree {
+        display: flex;
+      }
+      button {
+        color: white;
+        background-color: black;
+        padding: 10px;
+        margin: 1px;
+        min-width: 40px;
+      }
+      .bottomButton {
+        color: white;
+        background-color: black;
+        padding: 10px;
+        margin-right: -3px;
+        min-width: 40px;
+      }
+      .clear {
+        font-size: 8pt;
+        color: white;
+        background-color: black;
+        padding: 10px;
+        margin: 1px;
+        min-width: 40px;
+      }
+      .zero {
+        color: white;
+        background-color: black;
+        padding-left: 27px;
+        padding-right: 27px;
+        margin-left: 1px;
+        margin-right: -3px;
+        min-width: 82px;
+      }
+    </style>
+  </head>
+
+
+
+  <body>
+    <script>
+      let displayValue;
+      let firstNumber;
+      let secondNumber;
+      let operator;
+      let result;
+
+      const buttons = document.querySelectorAll('button');
+      buttons.forEach((button) => {
+        button.addEventListener("click", () => {
+      
+        });
+      });
+
+      function add(x,y) {
+        result = x + y;
+        return result;
+      }
+
+      function subtract(x,y) {
+        result = x - y;
+        return result;
+      }
+
+      function multiply(x,y) {
+        result = x * y;
+        return result
+      }
+
+      function divide(x,y) {
+        result = x / y;
+        return result;
+      }
+
+      function operate(x,y,z) {
+        if (z=="add") {
+          return add(x,y);
+        }
+        else if (z=="subtract") {
+          return subtract(x,y);
+        }
+        else if (z=="multiply") {
+          return multiply(x,y);
+        }
+        else if (z=="divide") {
+          return divid(x,y);
+        }
+      }
+
+    </script>
+
+
+
+    <div class="calculator">
+    <div class="topRow">
+      <div class="display-container">
+        <div class="display">1234</div>
+      </div>
+      <button class="clear">AC</button>
+    </div>
+    <div class="rowThree">
+      <button>9</button>
+      <button>8</button>
+      <button>7</button>
+      <button>+</button>
+    </div>
+    <div class="rowTwo">
+      <button>6</button>
+      <button>5</button>
+      <button>4</button>
+      <button>-</button>
+    </div>
+    <div class="rowOne">
+      <button>3</button>
+      <button>2</button>
+      <button>1</button>
+      <button>x</button>
+    </div>
+    <div class="bottomRow">
+      <button class="zero">0</button>
+      <button class="bottomButton">=</button>
+      <button class="bottomButton">/</button>
+    </div>
+    </div>
+  </body>
+</html>
